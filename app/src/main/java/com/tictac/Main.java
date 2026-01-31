@@ -1,9 +1,13 @@
+package com.tictac; // Indispensable : doit correspondre à tes dossiers
 
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
 public class Main {
     public static void main(String[] args) {
-        // C'est ici que ton jeu commence vraiment
-        System.out.println("Serveur Oracle prêt à recevoir la logique du jeu !");
-        
-        // Appelle ici tes fonctions de jeu
+        // Lance le serveur Web Tomcat intégré
+        SpringApplication.run(Main.class, args); 
+        System.out.println("✅ Serveur démarré sur le port 8080");
     }
 }
