@@ -8,7 +8,7 @@ import org.springframework.ui.Model;
 
 
 @Controller // 3. L'étiquette magique
-public class QuestionController 
+public class ControllerWeb
 {
 
     @GetMapping("/") // 1. On écoute l'adresse principale
