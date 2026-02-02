@@ -17,7 +17,7 @@ public class QuestionController
         return "index";
     }
     @PostMapping("/result") // 2. On récupère les données du formulaire
-    public String result(@RequestParam("Sex") int sex Model model) 
+    public String result(@RequestParam("Sex") int sex, Model model) 
     {
         model.addAttribute("SexChosen", sex);
         return "result";
