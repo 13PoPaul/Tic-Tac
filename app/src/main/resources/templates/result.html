@@ -14,6 +14,26 @@
     <br><br>
     <h1 style="color: #000; font-size: 30px; font-family: 'Press Start 2P';"> Result </h1>
     <br><br>
-    <p th:text="'We estimate yout time left to live to be :' + ${SexChosen}" style="font-size: 20px; font-family: 'Press Start 2P';"></p>
+    <p th:text="'We estimate yout time left to live to be : ' + ${NumberYears}" style="font-size: 20px; font-family: 'Press Start 2P';"></p>
+    <div class = "GrilleOfLife">
+        <style>
+            .GrilleOfLife div
+            {
+                background-color: #000;
+                border: #000 solid 1px;
+                width: 20px;
+                height: 20px;
+            }
+            .GrilleOfLife
+            {
+                display: flex;
+                flex-wrap: wrap;
+                width: 218px;
+                gap: 2px;
+                justify-content: center;
+            }
+        </style>
+        <div th:each="annee : ${#numbers.sequence(1, SexChosen)}" th:text="${annee}"></div>
+    </div>
 </body>
 </html>
