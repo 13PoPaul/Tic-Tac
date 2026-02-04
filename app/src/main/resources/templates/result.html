@@ -28,14 +28,16 @@
             {
                 display: flex;
                 flex-wrap: wrap;
-                width: 218px;
+                width: 1134px;
                 gap: 2px;
                 margin: auto;
             }
         </style>
-        <div th:each="semaines : ${#numbers.sequence(1, NumberYears * 52)}" th:text="${semaines}"></div>
+        <div th:each="semaines : ${#numbers.sequence(1, NumberYears * 52)}"></div>
     </div>
     <br><br>
-    <p Each case is a week. black = lived style="font-size: 20px; font-family: 'Press Start 2P';"></p>
+    <p style="font-size: 20px; font-family: 'Press Start 2P';">
+        Each case is a week. black = lived | white = not lived yet.
+    </p>
 </body>
 </html>
