@@ -14,6 +14,30 @@
     <br><br>
     <h1 style="color: #000; font-size: 30px; font-family: 'Press Start 2P';"> Result </h1>
     <br><br>
-    <p th:text="'We estimate yout time left to live to be :' + ${SexChosen}" style="font-size: 20px; font-family: 'Press Start 2P';"></p>
+    <p th:text="'We estimate yout time left to live to be : ' + ${NumberYears}" style="font-size: 20px; font-family: 'Press Start 2P';"></p>
+    <div class = "GrilleOfLife">
+        <style>
+            .GrilleOfLife div
+            {
+                background-color: #000;
+                border: #000 solid 1px;
+                width: 20px;
+                height: 20px;
+            }
+            .GrilleOfLife
+            {
+                display: flex;
+                flex-wrap: wrap;
+                width: 1134px;
+                gap: 2px;
+                margin: auto;
+            }
+        </style>
+        <div th:each="semaines : ${#numbers.sequence(1, NumberYears * 52)}"></div>
+    </div>
+    <br><br>
+    <p style="font-size: 20px; font-family: 'Press Start 2P';">
+        Each case is a week. black = lived | white = not lived yet.
+    </p>
 </body>
 </html>
