@@ -17,7 +17,11 @@ public class ControllerWeb
         return "index";
     }
     @PostMapping("/result") // 2. On récupère les données du formulaire
-    public String result(@RequestParam("Sex") int sex, Model model) 
+    public String result(@RequestParam("Sex") int sex, 
+    @RequestParam("DateBirthSelectionD") int D, 
+    @RequestParam("DateBirthSelectionM") int M,
+    @RequestParam("DateBirthSelectionY") int Y,
+     Model model) 
     {
         if (sex == 1)
         {
@@ -26,6 +30,10 @@ public class ControllerWeb
         else sex = 75;
         
         model.addAttribute("NumberYears", sex);
+
+        model.addAttribute("DateBirthSelectionD", D);
+        model.addAttribute("DateBirthSelectionM", M);
+        model.addAttribute("DateBirthSelectionY", Y);
         return "result";
     }
 

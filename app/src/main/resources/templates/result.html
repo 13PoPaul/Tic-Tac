@@ -7,14 +7,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/style.css}">
+
 </head>
 <body style="background-color: white; color: black; text-align: center; padding-top: 50px;">
     
-    <h1 style="color: #000; font-size: 50px; font-family: 'Press Start 2P';"> Tic-Tac </h1>
+    <h1 style = "font-size: 50px;"> Tic-Tac </h1>
     <br><br>
-    <h1 style="color: #000; font-size: 30px; font-family: 'Press Start 2P';"> Result </h1>
+    <h1 style = "font-size: 30px;"> Result </h1>
     <br><br>
-    <p th:text="'We estimate yout time left to live to be : ' + ${NumberYears}" style="font-size: 20px; font-family: 'Press Start 2P';"></p>
+    <p th:text="'We estimate yout time left to live to be : ' + ${NumberYears}"></p>
+    <p th:text="'Tentative afficher date de naissance : '  + ${DateBirthSelectionD} + ${DateBirthSelectionM} + ${DateBirthSelectionY}"></p>
     <div class = "GrilleOfLife">
         <style>
             .GrilleOfLife div
@@ -35,9 +38,8 @@
         </style>
         <div th:each="semaines : ${#numbers.sequence(1, NumberYears * 52)}"></div>
     </div>
-    <br><br>
-    <p style="font-size: 20px; font-family: 'Press Start 2P';">
-        Each case is a week. black = lived | white = not lived yet.
-    </p>
+    <br><br><br>
+    Each case is a week. black = lived | white = not lived yet.
+    <br><br><br>
 </body>
 </html>
