@@ -10,9 +10,6 @@ body
     
     /* 3. La couleur du texte par défaut */
     color: black;
-    
-    /* 4. Pour centrer tout le texte par défaut */
-    text-align: center;
 
     /* Taille de la police par défaut */
     font-size: 20px;
