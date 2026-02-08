@@ -14,5 +14,12 @@ body
     /* Taille de la police par défaut */
     font-size: 20px;
 
-    
+    /* Centrer le texte et l'input */
+    .date-line 
+    {
+    display: flex;
+    align-items: center;     /* Centre tout verticalement parfaitement */
+    justify-content: center; /* Centre tout horizontalement dans la page */
+    gap: 5px;                /* Ajoute un petit espace propre entre chaque élément */
+    }
 }

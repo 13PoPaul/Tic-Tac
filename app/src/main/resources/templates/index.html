@@ -8,12 +8,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" th:href="@{/style.css}">
 
-    <style>
-        input:invalid
-        {
-            background-color: lightpink;
-        }
-    </style>
 </head>
 <body style="background-color: white; color: black; text-align: center; padding-top: 50px;">
     
@@ -28,14 +22,15 @@
         <label for="women" style = "vertical-align: middle;"> Women </label>
 
         <br><br><br><br>
-        
-        <label for="DateBirthSelectionD" style = "vertical-align: middle;"> Date of Birth :</label>
-        <input type = "number" id = "DateBirthSelectionD" name = "DateBirthSelectionD" min = "0" max = "31" >
+        <div class="date-line">
+        Date of Birth :
+        <input type = "number" id = "DateBirthSelectionD" name = "DateBirthSelectionD" min = "0" max = "31" required>
         D/
-        <input type = "number" id = "DateBirthSelectionM" name = "DateBirthSelectionM" min = "1" max = "12" >
+        <input type = "number" id = "DateBirthSelectionM" name = "DateBirthSelectionM" min = "1" max = "12" required>
         M/
-        <input type = "number" id = "DateBirthSelectionY" name = "DateBirthSelectionY" min = "1900" max = "2026" >
+        <input type = "number" id = "DateBirthSelectionY" name = "DateBirthSelectionY" min = "1900" max = "2026" required>
         Y
+        </div>
         <br><br><br><br><br>
         <button type = "submit" style ="cursor: pointer; transform: scale(1.75); font-family: 'Press Start 2P', cursive;"> Estimate </button>
     </form>
