@@ -3,25 +3,41 @@
 <head>
     <title>Tic-Tac</title>
 
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/style.css}">
+
+    <style>
+        input:invalid
+        {
+            background-color: lightpink;
+        }
+    </style>
 </head>
 <body style="background-color: white; color: black; text-align: center; padding-top: 50px;">
     
-    <h1 style="color: #000; font-size: 50px; font-family: 'Press Start 2P';"> Tic-Tac </h1>
+    <h1 style="font-size: 50px;"> Tic-Tac </h1>
     <br><br>
     <form type ="submit" method ="post" action="/result">
 
-        <input type = "radio" id="man" name="Sex" value="1" style="accent-color: black; transform: scale(1.5); margin-right: 10px;  vertical-align: middle;" >
-        <label for="man" style = "font-size: 30px; font-family: 'Press Start 2P';  vertical-align: middle; "> Man </label>
+        <input type = "radio" id="man" name="Sex" value="1" checked style="accent-color: black; transform: scale(1.5); margin-right: 10px;  vertical-align: middle; ;" >
+        <label for="man" style = "vertical-align: middle;"> Man </label>
 
         <input type = "radio" id="women" name="Sex" value="0" style="accent-color: black; transform: scale(1.5); margin-right: 10px;  vertical-align: middle;">
-        <label for="women" style = "font-size: 30px; font-family: 'Press Start 2P'; vertical-align: middle;"> Women </label>
+        <label for="women" style = "vertical-align: middle;"> Women </label>
 
+        <br><br><br><br>
+        
+        <label for="DateBirthSelectionD" style = "vertical-align: middle;"> Date of Birth :</label>
+        <input type = "number" id = "DateBirthSelectionD" name = "Age" min = "0" max = "31" >
+        D/
+        <input type = "number" id = "DateBirthSelectionM" name = "Age" min = "1" max = "12" >
+        M/
+        <input type = "number" id = "DateBirthSelectionY" name = "Age" min = "1900" max = "2026" >
+        Y
         <br><br><br><br><br>
-        <button type = "submit" style ="cursor: pointer; font-family: 'Press Start 2P'; transform: scale(2);"> Estimate </button>
+        <button type = "submit" style ="cursor: pointer; transform: scale(1.75);"> Estimate </button>
     </form>
 </body>
 </html>

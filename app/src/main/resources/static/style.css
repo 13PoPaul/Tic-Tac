@@ -1,0 +1,21 @@
+/* style.css */
+
+body 
+{
+    /* 1. La police principale */
+    font-family: 'Press Start 2P', cursive; 
+    
+    /* 2. Une couleur de fond pour toute la page (optionnel) */
+    background-color: white;
+    
+    /* 3. La couleur du texte par défaut */
+    color: black;
+    
+    /* 4. Pour centrer tout le texte par défaut */
+    text-align: center;
+
+    /* Taille de la police par défaut */
+    font-size: 20px;
+
+    
+}
