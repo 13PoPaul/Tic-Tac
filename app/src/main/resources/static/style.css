@@ -15,8 +15,7 @@ body
     font-size: 20px;
 
     /* Centrer le texte et l'input */
-    .date-line 
-    {
+    .date-line {
     display: flex;
     align-items: center;     /* Centre tout verticalement parfaitement */
     justify-content: center; /* Centre tout horizontalement dans la page */
