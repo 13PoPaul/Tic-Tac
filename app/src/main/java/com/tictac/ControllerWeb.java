@@ -36,7 +36,7 @@ public class ControllerWeb
         LocalDate birthDate = LocalDate.of(Y, M, D);
         LocalDate currentDate = LocalDate.now();
         long WeeksLived = ChronoUnit.WEEKS.between(birthDate, currentDate);
-        int semainesRestantes = 52 * sex - WeeksLived;
+        long semainesRestantes = 52 * sex - WeeksLived;
 
         model.addAttribute("NumberYearsLived", WeeksLived);
         model.addAttribute("NumberWeeksLeft", semainesRestantes);
