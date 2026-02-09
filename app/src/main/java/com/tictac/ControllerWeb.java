@@ -35,10 +35,10 @@ public class ControllerWeb
         // Calcul de l'âge
         LocalDate birthDate = LocalDate.of(Y, M, D);
         LocalDate currentDate = LocalDate.now();
-        long YearsLived = ChronoUnit.WEEKS.between(birthDate, currentDate);
-        int semainesRestantes = (sex - YearsLived) * 52;
+        long WeeksLived = ChronoUnit.WEEKS.between(birthDate, currentDate);
+        int semainesRestantes = 52 * sex - WeeksLived;
 
-        model.addAttribute("NumberYearsLived", YearsLived);
+        model.addAttribute("NumberYearsLived", WeeksLived);
         model.addAttribute("NumberWeeksLeft", semainesRestantes);
         return "result";
     }
