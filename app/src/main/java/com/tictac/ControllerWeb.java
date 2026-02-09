@@ -5,7 +5,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.ui.Model;
-
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 
 @Controller // 3. L'étiquette magique
 public class ControllerWeb
@@ -31,9 +32,12 @@ public class ControllerWeb
         
         model.addAttribute("NumberYears", sex);
 
-        model.addAttribute("DateBirthSelectionD", D);
-        model.addAttribute("DateBirthSelectionM", M);
-        model.addAttribute("DateBirthSelectionY", Y);
+        // Calcul de l'âge
+        LocalDate birthDate = LocalDate.of(Y, M, D);
+        LocalDate currentDate = LocalDate.now();
+        long semainesVecues = ChronoUnit.WEEKS.between(birthDate, currentDate);
+
+        model.addAttribute("NumberYearsLived", semainesVecues);
         return "result";
     }
 

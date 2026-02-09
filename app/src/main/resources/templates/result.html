@@ -17,15 +17,21 @@
     <h1 style = "font-size: 30px;"> Result </h1>
     <br><br>
     <p th:text="'We estimate yout time left to live to be : ' + ${NumberYears}"></p>
-    <p th:text="'Tentative afficher date de naissance : '  + ${DateBirthSelectionD} + ${DateBirthSelectionM} + ${DateBirthSelectionY}"></p>
     <div class = "GrilleOfLife">
         <style>
             .GrilleOfLife div
             {
-                background-color: #000;
-                border: #000 solid 1px;
+                border: #000 solid 2px;
                 width: 20px;
                 height: 20px;
+            }
+            .GrilleOfLife .lived
+            {
+                background-color: black;
+            }
+            .GrilleOfLife .notlived
+            {
+                background-color: white;
             }
             .GrilleOfLife
             {
@@ -36,7 +42,7 @@
                 margin: auto;
             }
         </style>
-        <div th:each="semaines : ${#numbers.sequence(1, NumberYears * 52)}"></div>
+        <div th:each="semaines : ${#numbers.sequence(1, NumberYears * 52)}" th:class = "${semaines <= NumberYearsLived} ? 'lived' : 'notlived'"></div>
     </div>
     <br><br><br>
     Each case is a week. black = lived | white = not lived yet.
